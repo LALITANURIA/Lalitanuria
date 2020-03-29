@@ -1,0 +1,30 @@
+using System;
+
+namespace Q4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the size of array::");
+            int k = int.Parse(Console.ReadLine());
+            int[] n = new int[k];
+            int[] m = new int[k];
+            for (int i = 0; i < k; i++)
+            {
+                n[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Original Array...");
+            foreach (int j in n)
+            {
+                Console.WriteLine("Element = " +j);
+            }
+            Array.Copy(n, 0, m, 0, k);
+            Console.WriteLine("New Array...");
+            foreach (int res in m)
+            {
+                Console.Write(res+" ");
+            }
+        }
+    }
+}
