@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Collections;
+namespace Q7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the size of array1::");
+            int k = int.Parse(Console.ReadLine());
+            int[] arr1 = new int[k];
+            for (int i = 0; i < k; i++)
+            { arr1[i] = int.Parse(Console.ReadLine()); }
+
+            Console.WriteLine("Enter the size of array2::");
+            int k1 = int.Parse(Console.ReadLine());
+            int[] arr2 = new int[k1];
+            for (int i = 0; i < k1; i++)
+            { arr2[i] = int.Parse(Console.ReadLine()); }
+
+            //int [] arr3 = new int[k + k1];
+            var arr3 = new List<int>();
+            arr3.AddRange(arr1);
+            arr3.AddRange(arr2);
+            for (int u = 0; u < (k + k1); u++)
+                Console.Write(arr3[u]+" ");
+            Console.WriteLine();
+            arr3.Sort();
+            Console.WriteLine("Sorted array::");
+            for (int u = 0; u < (k + k1); u++)
+                Console.Write(arr3[u]+" ");
+
+        }
+    }
+}
